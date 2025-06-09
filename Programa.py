@@ -12,8 +12,9 @@ class Programa:
         # Agregar la db a nuestra aplicación
         db.init_app(self.app)
 
-        self.app.add_url_rule('/', view_func=self.buscarTodos)
-        self.app.add_url_rule('/nuevo', view_func=self.agregar, methods=["GET", "POST"])
+       self.app.add_url_rule('/', view_func=self.buscarTodos, methods=["GET"], endpoint='buscarTodos')
+self.app.add_url_rule('/nuevo', view_func=self.agregar, methods=["GET", "POST"], endpoint='agregar')
+
 
         # Iniciar servidor
         with self.app.app_context():
