@@ -12,11 +12,11 @@
     <div class="container">
 
        {% for estudiante in estudiantes %}
-            <p>
-                {{ estudiante.nombre }} <br />
-                {{ estudiante.email }} <br />
-                {{ estudiante.codigo }}
-            </p>
+            <tr>
+               <td> {{ estudiante.nombre }}</td>
+               <td> {{ estudiante.email }}</td>
+                <td>{{ estudiante.codigo }}</td>
+            </tr>
         {% endfor %}
    
     </div>

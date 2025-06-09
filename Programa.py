@@ -3,6 +3,7 @@ from db import db
 from Estudiante import Estudiante
 
 
+
 class Programa:
     def __init__(self):
         self.app = Flask(__name__)
@@ -22,7 +23,7 @@ class Programa:
 
     def buscarTodos(self):
         
-        return render_template("listaEstudiantes.html", estudiantes=Estudiantes.query.all())
+        return render_template("listaEstudiantes.html", estudiantes=Estudiante.query.all())
 
     def agregar(self):
         # Verificar si debe enviar el formulario o procesar los datos 
